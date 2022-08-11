@@ -6,7 +6,7 @@
 	<title></title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
 	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
-	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	
 </head>
 <body>
 
@@ -71,23 +71,67 @@
 			</div>
       </nav>
 
-    <div class="mid-container">
-        <h3 class="live-h3 mt-5 text-white text-center">Live Stream</h3>
-        <div class="livestream">
-            <video controls width="700">
-                <source src="/media/cc0-videos/flower.webm"
-                type="video/webm">
-            </video>
+	  <div class="mid-container d-flex justify-content-center align-items-center ml-3">
 
-            <video controls width="700">
-                <source src="/media/cc0-videos/flower.webm"
-                type="video/webm">
-            </video>
+		<div class="livestream">
+			<div class="live1-container">
+				<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" type="text/javascript"></script>
+				<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" type="text/javascript"></script>
+				<div id="oper "></div>
+				<div id="vid1"></div>
+				<script>
+				player = new Clappr.Player({
+				source: "https://hanflix-moviee.s3.ap-southeast-2.amazonaws.com/Doctor+Strange+In+The+Multiverse+Of+Madness+(2022)+%5B1080p%5D+%5BBluRay%5D+%5B5.1%5D+%5BYTS.MX%5D/output/Doctor.Strange.In.The.Multiverse.Of.Madness.2022.1080p.BluRay.x264.AAC5.1-%5BYTS.MX%5D.m3u8",
+				mimeType: "application/x-mpegURL",
+				autoPlay: true, 
+				// height: "500",
+				width: "500",
+				plugins: {"core": [LevelSelector]}, 
+				parentId: "#vid1"});
+				</script>
+				<span class="live-text1 text-white" style="margin-left: 40%; font-weight: bold;">Live Stream 1</span>
+			</div>
+
+		<div class="live2-container ml-5">
+			<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" type="text/javascript"></script>
+			<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" type="text/javascript"></script>
+			<div id="oper2"></div> 
+			<div id="vid2"></div>
+			<script>
+			player = new Clappr.Player({
+			source: "https://hanflix-moviee.s3.ap-southeast-2.amazonaws.com/Fantastic+Beasts+The+Secrets+Of+Dumbledore+(2022)+%5B1080p%5D+%5BBluRay%5D+%5B5.1%5D+%5BYTS.MX%5D/output/Fantastic.Beasts.The.Secrets.Of.Dumbledore.2022.1080p.BluRay.x264.AAC5.1-%5BYTS.MX%5D.m3u8",
+			autoPlay: true, 
+			// height: "500",
+			width: "500",
+			plugins: {"core": [LevelSelector]}, 
+			parentId: "#vid2"});
+			</script>
+			<span class="live-text2 text-white font-weight-bold" style="margin-left: 40%; font-weight: bold;">Live Stream 2</span>
+		</div>
+
+		<!-- <div class="live1-container d-flex justify-content-center align-items-center">
+					<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" type="text/javascript"></script>
+					<script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" type="text/javascript"></script>
+					<div id="oper"></div> 
+					<div id="vid2"></div>
+					<script>
+					player = new Clappr.Player({
+					source: "https://hanflix-moviee.s3.ap-southeast-2.amazonaws.com/Doctor+Strange+In+The+Multiverse+Of+Madness+(2022)+%5B1080p%5D+%5BBluRay%5D+%5B5.1%5D+%5BYTS.MX%5D/output/Doctor.Strange.In.The.Multiverse.Of.Madness.2022.1080p.BluRay.x264.AAC5.1-%5BYTS.MX%5D.m3u8",
+					mimeType: "application/x-mpegURL",
+					autoPlay: true, 
+					// height: "500",
+					width: "500",
+					plugins: {"core": [LevelSelector]}, 
+					parentId: "#vid2"});
+					</script>
+				</div> -->
+	</div>
+            
         </div>
 
         <hr class="new1">
 
-        <div class="movies">
+    <div class="movies">
 		<h4 class="recently text-white mt-3">Recently Added</h4>
 		<a href=""><img src="./images/ambulance.jpg"></a>
 		<a href=""><img src="./images/crawl.jpg"></a>
